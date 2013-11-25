@@ -1,0 +1,34 @@
+// ---------------------------------------------------------------------------
+// Imports
+
+@import "compass/reset";
+@import "compass";
+@import "susy";
+@import "mixins";
+
+// ---------------------------------------------------------------------------
+// Basic Grid
+
+$total-columns  : 12;
+$column-width   : 4em;
+$gutter-width   : 1em;
+$grid-padding   : $gutter-width;
+
+$show-grid-backgrounds  : false;
+
+* {
+	@include box-sizing(border-box);
+}
+
+
+
+@import "base";
+@import "main";
+
+/* -------------------------------------------------------------------------*/
+/* Layout */
+
+.container {
+  @include container;
+  @include susy-grid-background;
+}
